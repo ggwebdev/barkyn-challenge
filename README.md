@@ -16,13 +16,13 @@ Postman
 
 ## Running the project
 
-#1 -  ```git clone git@github.com:ggwebdev/barkyn-challenge.git```
-#2 - ```cd barkyn-challenge```
-#3 - ```composer install``` to install Lumen dependencies
-#4 - ```docker-compose up -d``` to up running the containers.
-#5 - ```docker exec app-app php artisan migrate:fresh --seed --force``` to run migrations and seeds
-#6 - ```docker exec app-app php vendor/phpunit/phpunit/phpunit``` to run the units tests
-#7 - Import the ```Barkyn.postman_collection.json``` located on root folder to Postman to access the collections createds and run the requests on API
+1 -  ```git clone git@github.com:ggwebdev/barkyn-challenge.git```
+2 - ```cd barkyn-challenge```
+3 - ```composer install``` to install Lumen dependencies
+4 - ```docker-compose up -d``` to up running the containers.
+5 - ```docker exec app-app php artisan migrate:fresh --seed --force``` to run migrations and seeds
+6 - ```docker exec app-app php vendor/phpunit/phpunit/phpunit``` to run the units tests
+7 - Import the ```Barkyn.postman_collection.json``` located on root folder to Postman to access the collections createds and run the requests on API
 
 Thats all. I hope I have achieved the challenge objective. =)
 
