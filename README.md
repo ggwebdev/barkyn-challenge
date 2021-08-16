@@ -16,9 +16,9 @@ Postman
 
 ## Running the project
 
-1 ```git clone git@github.com:ggwebdev/barkyn-challenge.git```
+1 ```git clone git@github.com:ggwebdev/barkyn-gabriel.git```
 
-2 ```cd barkyn-challenge```
+2 ```cd barkyn-gaibriel```
 
 3 ```composer install``` to install Lumen dependencies
 
