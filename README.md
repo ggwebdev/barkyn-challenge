@@ -28,7 +28,7 @@ Postman
 
 6 ```docker exec app-app php vendor/phpunit/phpunit/phpunit``` to run the units tests
 
-7 Import the ```Barkyn.postman_collection.json``` located on root folder to Postman to access the collections createds and run the requests on API
+7 Import the ```Barkyn.postman_collection.json``` file, located in the project's root folder, into Postman to access the project's collections and see the API working!
 
 
 Thats all. I hope I have achieved the challenge objective. =)
