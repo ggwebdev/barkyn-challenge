@@ -1,7 +1,7 @@
 # Barkyn API
 
 ## Challenge resume:
-Create a rest API using PHP or Golang, that allows the management of customers, subscriptions and pets, in accordance with the specifications passed by Barkyn in [this link](https://gist.github.com/barkyndev/3048763d21f80a3b6355f10ee7510b6a).
+Create an rest API using PHP or Golang, that allows the management of customers, subscriptions and pets, in accordance with the specifications passed by Barkyn in [this link](https://gist.github.com/barkyndev/3048763d21f80a3b6355f10ee7510b6a).
 
 
 
