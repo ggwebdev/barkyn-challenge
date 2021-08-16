@@ -1,0 +1,30 @@
+version: '3'
+
+volumes:
+  app-mysql-data:
+    driver: local
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: app-mysql
+    volumes:
+      - app-mysql-data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=barkyn
+      - MYSQL_USER=barkyn
+      - MYSQL_PASSWORD=secret
+  app:
+    image: ambientum/php:7.4-nginx
+    tty: true
+    container_name: app-app
+    # command: bash -c "while true; do echo Barkyn is Up; sleep 2; done"
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8080:8080"
+    links:
+      - mysql

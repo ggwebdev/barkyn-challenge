@@ -1,0 +1,582 @@
+{
+	"info": {
+		"_postman_id": "bbcacd6e-5cb8-4958-b22c-0583d5ef7a53",
+		"name": "Barkyn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers/5/subscription",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers",
+								"5",
+								"subscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers/5/pets",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers",
+								"5",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dispatch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers/1/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers",
+								"1",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers?name=Gabriel Neves&gender=male&birth_date=1985-05-27&email=gabriel9nc@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Gabriel Neves"
+								},
+								{
+									"key": "gender",
+									"value": "male"
+								},
+								{
+									"key": "birth_date",
+									"value": "1985-05-27"
+								},
+								{
+									"key": "email",
+									"value": "gabriel9nc@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers/1?name=Gabriel Neves&gender=male&birth_date=1985-05-27&email=gabriel9nc@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Gabriel Neves"
+								},
+								{
+									"key": "gender",
+									"value": "male"
+								},
+								{
+									"key": "birth_date",
+									"value": "1985-05-27"
+								},
+								{
+									"key": "email",
+									"value": "gabriel9nc@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers?name=Gabriel Neves&gender=male&birth_date=1985-05-27&email=gabriel9nc@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Gabriel Neves"
+								},
+								{
+									"key": "gender",
+									"value": "male"
+								},
+								{
+									"key": "birth_date",
+									"value": "1985-05-27"
+								},
+								{
+									"key": "email",
+									"value": "gabriel9nc@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscriptions",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/subscriptions",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/subscriptions/8/pets",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions",
+								"8",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/subscriptions/8/pets",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions",
+								"8",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dispatch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/customers/1/subscription/dispatch",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"customers",
+								"1",
+								"subscription",
+								"dispatch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/subscriptions?customer_id=10&base_price=20&total_price=17&next_order_date=2021-08-21",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "10"
+								},
+								{
+									"key": "base_price",
+									"value": "20"
+								},
+								{
+									"key": "total_price",
+									"value": "17"
+								},
+								{
+									"key": "next_order_date",
+									"value": "2021-08-21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/subscriptions?customer_id=10&base_price=20&total_price=17&next_order_date=2021-08-21",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "10"
+								},
+								{
+									"key": "base_price",
+									"value": "20"
+								},
+								{
+									"key": "total_price",
+									"value": "17"
+								},
+								{
+									"key": "next_order_date",
+									"value": "2021-08-21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/subscriptions/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pets",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/pets",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/pets/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/pets?subscription_id=6&name=Jully&gender=female&birth_date=3&lifestage=Adult&weight=4.5&photo&breed=Terrier brasileiro&activity=Active&body_type=Skinny",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pets"
+							],
+							"query": [
+								{
+									"key": "subscription_id",
+									"value": "6"
+								},
+								{
+									"key": "name",
+									"value": "Jully"
+								},
+								{
+									"key": "gender",
+									"value": "female"
+								},
+								{
+									"key": "birth_date",
+									"value": "3"
+								},
+								{
+									"key": "lifestage",
+									"value": "Adult"
+								},
+								{
+									"key": "weight",
+									"value": "4.5"
+								},
+								{
+									"key": "photo",
+									"value": null
+								},
+								{
+									"key": "breed",
+									"value": "Terrier brasileiro"
+								},
+								{
+									"key": "activity",
+									"value": "Active"
+								},
+								{
+									"key": "body_type",
+									"value": "Skinny"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/pets/16?name=Jully&gender=female&birth_date=2017-05-22&lifestage=Adult&weight=4.5&photo=https://images.dog.ceo/breeds/terrier-norwich/n02094258_1220.jpg&breed=Norwich terrier&activity=Active&body_type=Skinny",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pets",
+								"16"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Jully"
+								},
+								{
+									"key": "gender",
+									"value": "female"
+								},
+								{
+									"key": "birth_date",
+									"value": "2017-05-22"
+								},
+								{
+									"key": "lifestage",
+									"value": "Adult"
+								},
+								{
+									"key": "weight",
+									"value": "4.5"
+								},
+								{
+									"key": "photo",
+									"value": "https://images.dog.ceo/breeds/terrier-norwich/n02094258_1220.jpg"
+								},
+								{
+									"key": "breed",
+									"value": "Norwich terrier"
+								},
+								{
+									"key": "activity",
+									"value": "Active"
+								},
+								{
+									"key": "body_type",
+									"value": "Skinny"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/pets/16",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pets",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
