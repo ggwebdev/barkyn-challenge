@@ -6,7 +6,7 @@ Create an rest API using PHP or Golang, that allows the management of customers,
 
 
 ## Technologies
-In this challenge I decided to use Lumen micro-framework by Laravel widely used for creating APIs and microservices being one of the fastest micro-frameworks available. Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs). The all what I used in this project was:
+In this challenge I decided to use Lumen micro-framework by Laravel, widely used for creating APIs and microservices being one of the fastest micro-frameworks available. Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs). The all what I used in this project was:
 
 Lumen micro-framework PHP
 MySQL
