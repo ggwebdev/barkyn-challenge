@@ -5,19 +5,7 @@ use Laravel\Lumen\Testing\DatabaseTransactions;
 
 class PetsTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->get('/pets/1');
-        $this->response->assertJson([
-            'valid' => true,
-        ]);
-    }
-
+    
     /**
      * /pets [GET]
      */
@@ -42,15 +30,16 @@ class PetsTest extends TestCase
     public function testShouldCreatePet(){
 
         $parameters = [
-            'subscription_id' => 1,
+            'subscription_id' => 3,
             'name' => 'Thor',
             'gender' => 'male',
-            'breed' => 'Fila Brasileiro',
             'birth_date' => '2015-07-21',
             'lifestage' => 'Senior',
-            'activity' => 'Lazy',
-            'body_type' => 'Normal',
-            'weight' => 26,
+            'weight' => 19.00,
+            'photo' => '',
+            'breed' => 'Fila Brasileiro',
+            'activity' => 'Normal',
+            'body_type' => 'Normal'
         ];
 
         $this->post("pets", $parameters, []);
