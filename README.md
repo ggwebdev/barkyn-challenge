@@ -1,24 +1,29 @@
-# Lumen PHP Framework
+# Barkyn API
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+## Challenge resume:
+Create a rest API using PHP or Golang, that allows the management of customers, subscriptions and pets, in accordance with the specifications passed by Barkyn in [this link](https://gist.github.com/barkyndev/3048763d21f80a3b6355f10ee7510b6a).
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## Tecnology used 
+In this challenge I decided to use Lumen micro-framework by Laravel widely used for creating APIs and microservices being one of the fastest micro-frameworks available. Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs). The all what I used in this project was:
 
-## Contributing
+Lumen micro-framework PHP
+MySQL
+Docker
+PhpUnit
+Postman
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Running the project
 
-## Security Vulnerabilities
+#1 -  ```git clone git@github.com:ggwebdev/barkyn-challenge.git```
+#2 - ```cd barkyn-challenge```
+#3 - ```composer install``` to install Lumen dependencies
+#4 - ```docker-compose up -d``` to up running the containers.
+#5 - ```docker exec app-app php artisan migrate:fresh --seed --force``` to run migrations and seeds
+#6 - ```docker exec app-app php vendor/phpunit/phpunit/phpunit``` to run the units tests
+#7 - Import the ```Barkyn.postman_collection.json``` located on root folder to Postman to access the collections createds and run the requests on API
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Thats all. I hope I have achieved the challenge objective. =)
 
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Gabriel Neves
