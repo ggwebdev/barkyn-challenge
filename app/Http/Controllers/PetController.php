@@ -2,137 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customer;
-use App\Models\Subscription;
-use App\Models\Pet;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use App\Services\PetService;
 
 class PetController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    
+    private $petService;
+    
+    public function __construct(PetService $petService)
     {
-        //
+        $this->petService = $petService;
     }
 
     public function index(){
-
-        $pets = Pet::all();
-        
-        $data['valid'] = true;
-        $data['data']['pets'] = $pets;
-        
-        return response()->json($data);
-
+        return $this->petService->getAll();
     }
 
     public function show($id){
-
-        $pet = Pet::find($id);
-
-        if($pet){
-
-            $data['valid'] = true;
-            $data['data']['pet'] = $pet;
-            
-        }else{
-
-            $data['valid'] = false;
-            $data['errors'] = 'Pet not found...';
-
-        }
-
-        return response()->json($data);
-
-    }
-
-    public function subscription($id){
-
-        $pet = Pet::find($id);
-
-        if($pet){
-
-            $data['valid'] = true;
-            $data['data']['pet'] = $pet;
-            $data['data']['pet']['subscription'] = $pet->subscription;
-            
-        }else{
-
-            $data['valid'] = false;
-            $data['errors'] = 'Subscription from this pet not found...';
-
-        }
-
-        return response()->json($data);
-
+        return $this->petService->get($id);
     }
 
     public function store(Request $request){
-
-        $pet = Pet::create($request->all());
-
-        if($pet){
-
-            $data['valid'] = true;
-            $data['message'] = 'Pet has been created!';
-            $data['data']['pet'] = $pet;
-        
-        }else{
-
-            $data['valid'] = false;
-            $data['errors'] = 'Pet cannot be saved...';
-
-        }
-
-        return response()->json($data, 200);
-
+        return $this->petService->store($request);
     }
 
     public function update($id, Request $request){
-
-        $pet = Pet::where('id', $id)->update($request->except('subscription_id'));
-
-        if($pet){
-
-            $data['valid'] = true;
-            $data['message'] = 'Pet has been updated!';
-            $data['data']['pet'] = Pet::find($id);
-        
-        }else{
-
-            $data['valid'] = false;
-            $data['errors'] = 'Pet cannot be updated...';
-
-        }
-
-        return response()->json($data, 200);
-
+        return $this->petService->update($id, $request);
     }
 
-    public function destroy(Request $request, $id){
-
-        $pet = Pet::find($id);
-        
-        if($pet){
-            
-            Pet::where('id', $id)->delete();
-            $data['valid'] = true;
-            $data['message'] = 'Pet has been deleted!';
-            $data['data']['pet'] = $pet;
-        
-        }else{
-
-            $data['valid'] = false;
-            $data['errors'] = 'Pet not found...';
-
-        }
-
-        return response()->json($data, 410);
-
+    public function destroy($id){
+        return $this->petService->destroy($id);
     }
+
 }
