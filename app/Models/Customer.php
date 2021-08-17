@@ -13,6 +13,13 @@ class Customer extends Model implements AuthenticatableContract, AuthorizableCon
 {
     use Authenticatable, Authorizable, HasFactory;
 
+    const RULE_CUSTOMER = [
+        'name'          => 'required',
+        'birth_date'    => 'required|date|date_format:Y-m-d|before:-18 years',
+        'gender'        => 'required|in:male,female',
+        'email'         => 'required|email|unique:customers'
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
