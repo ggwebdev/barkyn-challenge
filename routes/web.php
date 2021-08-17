@@ -21,7 +21,7 @@ $router->group(['prefix' => 'customers'], function () use ($router) {
     $router->get('/', 'CustomerController@index');
     $router->get('/{id}/profile', 'CustomerController@profile');
     $router->get('/{id}/subscription', 'CustomerController@subscription');
-    $router->get('/{id}/subscription/dispatch', 'CustomerController@Dispatch');
+    $router->get('/{id}/subscription/dispatch', 'CustomerController@dispatch');
     $router->get('/{id}/pets', 'CustomerController@pets');
     $router->get('/{id}', 'CustomerController@show');
     $router->post('/', 'CustomerController@store');
