@@ -18,7 +18,7 @@ Postman
 
 1 ```git clone git@github.com:ggwebdev/barkyn-gabriel.git```
 
-2 ```cd barkyn-gaibriel```
+2 ```cd barkyn-gabriel```
 
 3 ```composer install``` to install Lumen dependencies
 
