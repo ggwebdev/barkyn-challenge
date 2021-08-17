@@ -76,7 +76,7 @@ class SubscriptionController extends Controller
 
         $validator = Validator::make($request->all(), [
             'base_price'        => 'required|numeric|between:20,45',
-            'total_price'       => 'required|numeric|between:20,45',
+            'total_price'       => 'required|numeric|between:17,45',
             'next_order_date'   => 'required|date|date_format:Y-m-d|after_or_equal:tomorrow',
         ]);
 
@@ -124,7 +124,7 @@ class SubscriptionController extends Controller
 
         $validator = Validator::make($request->all(), [
             'base_price'        => 'numeric|between:20,45',
-            'total_price'       => 'numeric|between:20,45',
+            'total_price'       => 'numeric|between:17,45',
             'next_order_date'   => 'required|date|date_format:Y-m-d|after_or_equal:tomorrow',
         ]);
 
@@ -202,6 +202,29 @@ class SubscriptionController extends Controller
         }
 
         return response()->json($data);
+
+    }
+
+    public function addPet($id, Request $request){
+
+        $subscription = Subscription::find($id);
+
+        $pet = $subscription->pets()->create($request->all());
+
+        if($pet){
+
+            $data['valid'] = true;
+            $data['message'] = 'Pet has been created!';
+            $data['data']['pet'] = $pet;
+        
+        }else{
+
+            $data['valid'] = false;
+            $data['errors'] = 'Pet cannot be saved...';
+
+        }
+
+        return response()->json($data, 200);
 
     }
 

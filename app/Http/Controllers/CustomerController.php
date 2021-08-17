@@ -111,9 +111,9 @@ class CustomerController extends Controller
 
             $data['valid'] = false;
             $data['errors'] = 'Customer subscription cannot be dispatched...';
-
+            
         }
-
+        
         return response()->json($data);
 
     }
