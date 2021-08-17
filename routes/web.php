@@ -37,13 +37,12 @@ $router->group(['prefix' => 'subscriptions'], function () use ($router) {
     $router->post('/', 'SubscriptionController@store');
     $router->put('/{id}', 'SubscriptionController@update');
     $router->delete('/{id}', 'SubscriptionController@destroy');
-    $router->post('/{id}/add-pet', 'SubscriptionController@addPet');
 });
 
 $router->group(['prefix' => 'pets'], function () use ($router) {
     $router->get('/', 'PetController@index');
     $router->get('/{id}', 'PetController@show');
-    $router->get('/{id}/pets', 'PetController@pets');
+    $router->get('/{id}/subscription', 'PetController@subscription');
     $router->post('/', 'PetController@store');
     $router->put('/{id}', 'PetController@update');
     $router->delete('/{id}', 'PetController@destroy');

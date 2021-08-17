@@ -205,27 +205,4 @@ class SubscriptionController extends Controller
 
     }
 
-    public function addPet($id, Request $request){
-
-        $subscription = Subscription::find($id);
-
-        $pet = $subscription->pets()->create($request->all());
-
-        if($pet){
-
-            $data['valid'] = true;
-            $data['message'] = 'Pet has been created!';
-            $data['data']['pet'] = $pet;
-        
-        }else{
-
-            $data['valid'] = false;
-            $data['errors'] = 'Pet cannot be saved...';
-
-        }
-
-        return response()->json($data, 200);
-
-    }
-
 }
